@@ -1,12 +1,15 @@
 # referidostesla.com
 
-Web estática de una sola página (HTML + CSS + JS en línea) para Cloudflare Pages. No hay paso de compilación: el directorio raíz es el que se publica.
+Web estática de una sola página (HTML + CSS + JS en línea). No hay paso de compilación: el directorio raíz es el que se publica.
 
-## Publicar en Cloudflare Pages
-- Framework preset: *None*. Build command: vacío. Output directory: `/`.
-- Dominio personalizado `referidostesla.com`. Redirigir `www.referidostesla.com` → `https://referidostesla.com/` con una regla de redirección 301 (Bulk Redirects o Redirect Rules) y activar *Always Use HTTPS*.
-- `_headers` define cabeceras de seguridad y caché.
-- `README.md` y `fonts/LICENSE.txt` se publican también; no afectan al SEO.
+## Publicar en Netlify
+1. app.netlify.com → **Add new site → Import an existing project → GitHub** → repo `jrg1976/referidosTSL`.
+2. Rama a desplegar: la que tenga la versión final. `netlify.toml` ya fija el directorio de publicación (`.`) y no hay build command.
+3. **Domain management → Add a domain** `referidostesla.com` y añadir también `www`. Marcar la raíz como dominio principal: Netlify redirige `www` → raíz con 301.
+4. DNS: nameservers de Netlify, o registro A/ALIAS para la raíz y CNAME `www` hacia el `*.netlify.app`.
+5. **HTTPS**: certificado gratuito y *Force HTTPS*.
+6. `_headers` (cabeceras de seguridad y caché) lo lee Netlify sin cambios.
+7. `README.md`, `netlify.toml` y `fonts/LICENSE.txt` también se publican; no afectan al SEO.
 
 ## Al revisar las condiciones (todo a la vez)
 1. `index.html`: buscar `20/10/2026` (1 aparición visible en el footer, dentro de `<time datetime="2026-10-20">`) y el texto de la meta description.
