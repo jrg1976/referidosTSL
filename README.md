@@ -17,6 +17,9 @@ Web estática de una sola página (HTML + CSS + JS en línea) para Cloudflare Pa
 6. Si se llega a 10 recomendaciones en el año, añadir un aviso visible en el hero.
 
 ## Pendiente
-- Foto del propietario: guardar `img/propietario-480.webp`, `-800.webp` y `-1200.webp` (proporción 4:5) y sustituir el `<figure>` de la sección «Quién recomienda» por el `<img>` que está comentado justo encima.
+- **Fotos provisionales de tesla.com (© Tesla, Inc.), solo para la demo. Sustituir antes de publicar:**
+  - `img/hero-model3-*.webp` (hero), `img/model3-*.webp` y `img/modely-*.webp` (Modelos), `img/cierre-modely-*.webp` (cierre).
+  - `img/corazon-446.webp` (robot, «Quién recomienda»): cambiar por la foto propia del propietario haciendo un corazón delante de su Model 3, proporción 4:5, con alt «Propietario haciendo un corazón con las manos delante de su Tesla Model 3».
+  - Cambiar también la línea de créditos del footer.
 - Validar en https://validator.schema.org y en la prueba de resultados enriquecidos de Google tras publicar.
 - Alta en Google Search Console y Bing Webmaster Tools, y enviar `sitemap.xml`.

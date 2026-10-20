@@ -180,8 +180,12 @@ html:not(.js) .menu-btn{display:none}
 .panel .btn{width:100%}
 
 /* Hero */
-.hero{position:relative;display:flex;flex-direction:column;background:var(--color-ink);color:var(--color-on-dark);overflow:hidden}
-.hero-main{position:relative;flex:1;display:flex;flex-direction:column;align-items:center;text-align:center;padding:calc(var(--header-h) + 32px) var(--gutter) 32px;max-width:960px;margin:0 auto;width:100%}
+.hero{position:relative;background:var(--color-ink);color:var(--color-on-dark)}
+.hero-stage{position:relative;display:flex;flex-direction:column;overflow:hidden}
+.hero-media{order:2;position:relative;margin:0}
+.hero-media img{width:100%;aspect-ratio:4/3;object-fit:cover;object-position:45% 60%}
+.hero-actions{display:flex;flex-direction:column;align-items:center;width:100%}
+.hero-main{position:relative;z-index:1;flex:1;display:flex;flex-direction:column;align-items:center;text-align:center;padding:calc(var(--header-h) + 32px) var(--gutter) 32px;max-width:960px;margin:0 auto;width:100%}
 .eyebrow{font-size:var(--fs-body);font-weight:500;color:var(--color-on-dark-muted);margin-bottom:16px}
 .hero h1{color:#fff;font-size:36px;line-height:42px;max-width:22ch}
 .answer{margin-top:20px;font-size:var(--fs-lead);line-height:var(--lh-lead);color:var(--color-on-dark-muted);max-width:60ch}
@@ -194,7 +198,7 @@ html:not(.js) .menu-btn{display:none}
 .copy-btn{height:32px;min-width:84px;padding:0 14px;border:0;border-radius:var(--radius);background:var(--color-surface);color:var(--color-ink);font:500 var(--fs-body)/1 var(--font);cursor:pointer;transition:background-color var(--dur) var(--ease)}
 .copy-btn:hover{background:#E4E4E4}
 .copy-btn.is-done{background:var(--color-ink);color:#fff}
-.seal{display:inline-block;margin-top:24px;padding:6px 12px;border-radius:999px;background:rgba(255,255,255,.08);font-size:var(--fs-legal);color:var(--color-on-dark-muted)}
+.seal{display:inline-block;margin-top:24px;padding:6px 12px;border-radius:999px;background:rgba(23,26,32,.5);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);font-size:var(--fs-legal);color:rgba(255,255,255,.85)}
 .seal::before{content:"";display:inline-block;vertical-align:middle;width:6px;height:6px;margin:-2px 8px 0 0;border-radius:50%;background:#4CC38A}
 .seal-dark{background:var(--color-surface);color:var(--color-text)}
 .stats{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:8px;max-width:var(--maxw);width:100%;margin:0 auto;padding:24px var(--gutter) calc(32px + env(safe-area-inset-bottom));border-top:1px solid rgba(255,255,255,.1)}
@@ -206,10 +210,14 @@ html:not(.js) .menu-btn{display:none}
   .stats dd{font-size:32px;line-height:40px}
 }
 @media (min-width:900px){
-  .hero{min-height:100vh;min-height:100svh}
-  .hero-main{padding-top:calc(var(--header-h) + 9vh);padding-bottom:40px}
+  .hero-stage{min-height:max(560px,calc(100vh - 128px));min-height:max(560px,calc(100svh - 128px))}
+  .hero-media{position:absolute;inset:0}
+  .hero-media img{height:100%;aspect-ratio:auto;object-position:50% 72%}
+  .hero-media::after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.62) 0,rgba(0,0,0,.38) 30%,rgba(0,0,0,0) 52%),linear-gradient(to top,rgba(0,0,0,.5) 0,rgba(0,0,0,0) 26%)}
+  .hero-main{padding-top:calc(var(--header-h) + 5vh);padding-bottom:32px;max-width:1040px}
+  .hero-actions{margin-top:auto;padding-top:32px}
   .hero h1{font-size:var(--fs-hero);line-height:var(--lh-hero);max-width:none}
-  .answer{font-size:20px;line-height:30px}
+  .answer{font-size:18px;line-height:28px;max-width:58em;color:rgba(255,255,255,.85)}
   .hero-ctas{flex-direction:row;justify-content:center;max-width:none}
   .hero-ctas>*{width:var(--btn-min-w)!important;flex:0 0 auto}
   .stats dd{font-size:40px;line-height:48px}
@@ -251,8 +259,10 @@ html:not(.js) .menu-btn{display:none}
 /* Models */
 .models{display:grid;gap:16px}
 @media (min-width:600px){.models{grid-template-columns:1fr 1fr}}
-.model{border:1px solid var(--color-line);border-radius:var(--radius-card);padding:32px;display:flex;align-items:flex-end;justify-content:space-between;min-height:200px}
-.model h3{font-size:32px;line-height:40px}
+.model{border:1px solid var(--color-line);border-radius:var(--radius-card);overflow:hidden;display:flex;flex-direction:column;margin:0}
+.model img{width:100%;aspect-ratio:16/9;object-fit:cover;background:var(--color-surface)}
+.model-body{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:20px 24px}
+.model h3{font-size:24px;line-height:32px}
 .badge{display:inline-flex;align-items:center;gap:6px;height:28px;padding:0 12px;border-radius:999px;background:#E9F7EF;color:#17663F;font-size:13px;font-weight:500}
 .badge::before{content:"✓"}
 .not-eligible{margin-top:20px;font-size:15px;line-height:22px;color:var(--color-muted)}
@@ -270,8 +280,7 @@ html:not(.js) .menu-btn{display:none}
 /* Owner */
 .owner{display:grid;gap:40px;align-items:center}
 @media (min-width:900px){.owner{grid-template-columns:5fr 6fr;gap:72px}}
-.owner-photo{margin:0;border-radius:var(--radius-card);overflow:hidden;background:var(--color-surface);aspect-ratio:4/5;display:flex;align-items:center;justify-content:center;color:var(--color-muted);font-size:var(--fs-legal);text-align:center;padding:24px}
-.owner-photo svg{display:block;margin:0 auto 12px;width:56px;height:56px}
+.owner-photo{margin:0;border-radius:var(--radius-card);overflow:hidden;background:var(--color-ink);aspect-ratio:4/5;max-width:100%}
 .owner-photo img{width:100%;height:100%;object-fit:cover}
 .owner p{margin-top:16px;font-size:var(--fs-lead);line-height:var(--lh-lead)}
 .chips{list-style:none;display:flex;flex-wrap:wrap;gap:8px;margin:28px 0 0;padding:0}
@@ -290,10 +299,14 @@ html:not(.js) .menu-btn{display:none}
 .faq details p{padding:0 32px 22px 0;font-size:15px;line-height:23px}
 
 /* Closing */
-.closing{background:var(--color-ink);color:var(--color-on-dark-muted);text-align:center;padding:96px 0}
+.closing{position:relative;overflow:hidden;background:var(--color-ink);color:rgba(255,255,255,.85);text-align:center;padding:72px 0 0;min-height:540px}
+.closing-media{position:absolute;inset:0;margin:0}
+.closing-media img{width:100%;height:100%;object-fit:cover;object-position:45% 80%}
+.closing-media::after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.62),rgba(0,0,0,.25) 50%,rgba(0,0,0,0) 72%)}
+.closing .wrap{position:relative;z-index:1}
 .closing h2{color:#fff;font-size:30px;line-height:38px}
 .closing p{margin:14px auto 32px;font-size:var(--fs-lead);line-height:var(--lh-lead);max-width:44ch}
-@media (min-width:900px){.closing{padding:136px 0}.closing h2{font-size:var(--fs-h2);line-height:var(--lh-h2)}}
+@media (min-width:900px){.closing{padding:104px 0 0;min-height:720px}.closing h2{font-size:var(--fs-h2);line-height:var(--lh-h2)}}
 
 /* Footer */
 .footer{padding:40px 0 48px;font-size:var(--fs-legal);line-height:18px;color:var(--color-text)}
@@ -347,11 +360,16 @@ html:not(.js) .menu-btn{display:none}
 <main id="contenido">
 
   <section class="hero" aria-labelledby="h1">
+    <div class="hero-stage">
+    <div class="hero-media">
+      <img src="img/hero-model3-1280.webp" srcset="img/hero-model3-828.webp 828w, img/hero-model3-1280.webp 1280w, img/hero-model3-1728.webp 1728w" sizes="(min-width: 900px) 130vw, 100vw" width="1728" height="844" fetchpriority="high" decoding="async" alt="Tesla Model 3 gris aparcado frente a un edificio de piedra con escalinata">
+    </div>
     <div class="hero-main">
       <p class="eyebrow">Programa Recomendar y ganar · España</p>
       <h1 id="h1">Referidos Tesla: 1.000 km de Supercarga gratis con mi enlace</h1>
       <p class="answer">Si compras tu primer Tesla Model 3 o Model Y nuevo desde un enlace de recomendación, recibes <strong>1.000 km de Supercarga gratis</strong>. Abre el enlace antes de hacer el pedido: después ya no se puede añadir.</p>
 
+      <div class="hero-actions">
       <div class="hero-ctas">
         <a class="btn btn-primary btn-lg" href="https://ts.la/jaime666237" rel="nofollow noopener" target="_blank">Configurar mi Tesla con 1.000 km</a>
         <div class="linkbox">
@@ -362,6 +380,8 @@ html:not(.js) .menu-btn{display:none}
       <p class="sr-only" aria-live="polite" id="copy-status"></p>
 
       <p class="seal">Condiciones comprobadas el <time datetime="2026-10-20">20/10/2026</time></p>
+      </div>
+    </div>
     </div>
 
     <dl class="stats" aria-label="Datos rápidos">
@@ -426,8 +446,14 @@ html:not(.js) .menu-btn{display:none}
         <p class="lead">Vale para pedidos personalizados y para coches nuevos de inventario comprados desde el enlace.</p>
       </div>
       <div class="models">
-        <div class="model reveal"><h3>Model 3</h3><span class="badge">Elegible</span></div>
-        <div class="model reveal"><h3>Model Y</h3><span class="badge">Elegible</span></div>
+        <article class="model reveal">
+          <img src="img/model3-640.webp" srcset="img/model3-640.webp 640w, img/model3-1024.webp 1024w" sizes="(min-width: 1200px) 580px, (min-width: 600px) 50vw, 100vw" width="1024" height="580" loading="lazy" decoding="async" alt="Tesla Model 3 gris circulando por una calle junto a un edificio con columnas">
+          <div class="model-body"><h3>Model 3</h3><span class="badge">Elegible</span></div>
+        </article>
+        <article class="model reveal">
+          <img src="img/modely-640.webp" srcset="img/modely-640.webp 640w, img/modely-1024.webp 1024w" sizes="(min-width: 1200px) 580px, (min-width: 600px) 50vw, 100vw" width="1024" height="580" loading="lazy" decoding="async" alt="Tesla Model Y gris visto desde atrás en una avenida arbolada">
+          <div class="model-body"><h3>Model Y</h3><span class="badge">Elegible</span></div>
+        </article>
       </div>
       <p class="not-eligible reveal"><strong>No elegibles:</strong> Model S, Model X y vehículos de ocasión certificados.</p>
     </div>
@@ -456,14 +482,9 @@ html:not(.js) .menu-btn{display:none}
 
   <section class="section" id="quien-recomienda" aria-labelledby="h-quien">
     <div class="wrap owner">
-      <!-- Cuando tengas la foto, sustituye el contenido de <figure> por:
-      <img src="/img/propietario-800.webp" srcset="/img/propietario-480.webp 480w, /img/propietario-800.webp 800w, /img/propietario-1200.webp 1200w" sizes="(min-width: 900px) 45vw, 100vw" width="800" height="1000" loading="lazy" decoding="async" alt="Propietario haciendo un corazón con las manos delante de su Tesla Model 3">
-      -->
+      <!-- Imagen provisional para la demo. Sustituir por la foto propia del propietario haciendo un corazón delante de su Model 3, con alt="Propietario haciendo un corazón con las manos delante de su Tesla Model 3". -->
       <figure class="owner-photo reveal">
-        <figcaption>
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.2" aria-hidden="true"><path d="M12 20s-7-4.4-7-10a4 4 0 0 1 7-2.6A4 4 0 0 1 19 10c0 5.6-7 10-7 10z"/></svg>
-          Foto del propietario con su Model 3 · próximamente
-        </figcaption>
+        <img src="img/corazon-446.webp" width="446" height="558" loading="lazy" decoding="async" alt="Robot humanoide haciendo un corazón con las manos sobre fondo oscuro">
       </figure>
       <div class="reveal">
         <p class="kicker">Quién recomienda</p>
@@ -509,6 +530,9 @@ html:not(.js) .menu-btn{display:none}
   </section>
 
   <section class="closing" aria-labelledby="h-cierre">
+    <div class="closing-media">
+      <img src="img/cierre-modely-1600.webp" srcset="img/cierre-modely-960.webp 960w, img/cierre-modely-1600.webp 1600w, img/cierre-modely-2400.webp 2400w" sizes="100vw" width="2400" height="1018" loading="lazy" decoding="async" alt="Tesla Model Y rojo tomando una curva en una carretera entre colinas verdes">
+    </div>
     <div class="wrap reveal">
       <h2 id="h-cierre">¿Vas a pedir tu primer Tesla?</h2>
       <p>Abre el enlace antes de configurar y te llevas 1.000 km de Supercarga.</p>
@@ -528,7 +552,7 @@ html:not(.js) .menu-btn{display:none}
     </nav>
     <p>referidostesla.com es una web independiente hecha por un propietario. No está afiliada, patrocinada ni aprobada por Tesla, Inc. Tesla, Model 3, Model Y y Supercargador son marcas de Tesla, Inc.</p>
     <p>Condiciones comprobadas el <time datetime="2026-10-20">20/10/2026</time> en tesla.com. Contacto: <a href="mailto:hola@referidostesla.com">hola@referidostesla.com</a></p>
-    <p>Imágenes propias. Tipografía Inter, licencia SIL Open Font License 1.1.</p>
+    <p>Fotografías provisionales de tesla.com, propiedad de Tesla, Inc., usadas solo en esta demo. Tipografía Inter, licencia SIL Open Font License 1.1.</p>
   </div>
 </footer>
 
@@ -538,9 +562,11 @@ html:not(.js) .menu-btn{display:none}
 
 <script>
 (function(){
-  var header=document.querySelector('.header'),hero=document.querySelector('.hero');
+  var header=document.querySelector('.header'),stage=document.querySelector('.hero-stage'),wide=matchMedia('(min-width:900px)'),ticking=false;
+  function updHeader(){ticking=false;header.classList.toggle('is-solid',window.scrollY>(wide.matches?stage.offsetHeight-56:8))}
+  addEventListener('scroll',function(){if(!ticking){ticking=true;requestAnimationFrame(updHeader)}},{passive:true});
+  updHeader();
   if('IntersectionObserver' in window){
-    new IntersectionObserver(function(e){header.classList.toggle('is-solid',!e[0].isIntersecting)},{rootMargin:'-56px 0px 0px 0px'}).observe(hero);
     var io=new IntersectionObserver(function(es){es.forEach(function(x){if(x.isIntersecting){x.target.classList.add('is-in');io.unobserve(x.target)}})},{rootMargin:'0px 0px -8% 0px'});
     document.querySelectorAll('.reveal').forEach(function(el){io.observe(el)});
   }
