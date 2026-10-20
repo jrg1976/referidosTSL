@@ -179,12 +179,12 @@ html:not(.js) .menu-btn{display:none}
 
 /* Hero */
 .hero{position:relative;background:var(--color-ink);color:var(--color-on-dark)}
-.hero-stage{position:relative;display:flex;flex-direction:column;overflow:hidden}
-.hero-media{position:absolute;left:0;right:0;bottom:0;height:104vw;margin:0}
-.hero-media img{width:100%;height:100%;object-fit:cover;object-position:47% 50%}
-.hero-media::after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,var(--color-ink) 0,rgba(23,26,32,.62) 18%,rgba(23,26,32,.3) 38%,rgba(23,26,32,0) 56%)}
+.hero-stage{position:relative;display:flex;flex-direction:column;overflow:hidden;background:#000}
+.hero-media{position:absolute;left:0;right:0;bottom:0;height:100vw;margin:0}
+.hero-media img{width:100%;height:100%;object-fit:cover;object-position:50% 50%}
+.hero-media::after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,#000 0,rgba(0,0,0,0) 30%)}
 .hero-actions{display:flex;flex-direction:column;align-items:center;width:100%}
-.hero-main{position:relative;z-index:1;flex:1;display:flex;flex-direction:column;align-items:center;text-align:center;padding:calc(var(--header-h) + 32px) var(--gutter) 50vw;max-width:960px;margin:0 auto;width:100%}
+.hero-main{position:relative;z-index:1;flex:1;display:flex;flex-direction:column;align-items:center;text-align:center;padding:calc(var(--header-h) + 32px) var(--gutter) 62vw;max-width:960px;margin:0 auto;width:100%}
 .eyebrow{font-size:var(--fs-body);font-weight:500;color:var(--color-on-dark-muted);margin-bottom:16px}
 .hero h1{color:#fff;font-size:36px;line-height:42px;max-width:22ch}
 .answer{margin-top:20px;font-size:var(--fs-lead);line-height:var(--lh-lead);color:var(--color-on-dark-muted);max-width:60ch}
@@ -200,8 +200,8 @@ html:not(.js) .menu-btn{display:none}
 @media (min-width:900px){
   .hero-stage{min-height:max(560px,calc(100vh - 100px));min-height:max(560px,calc(100svh - 100px))}
   .hero-media{position:absolute;inset:0;height:auto}
-  .hero-media img{height:100%;aspect-ratio:auto;object-position:50% 72%}
-  .hero-media::after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.62) 0,rgba(0,0,0,.38) 30%,rgba(0,0,0,0) 52%),linear-gradient(to top,rgba(0,0,0,.5) 0,rgba(0,0,0,0) 26%)}
+  .hero-media img{height:100%;aspect-ratio:auto;object-position:50% 40%}
+  .hero-media::after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.45) 0,rgba(0,0,0,0) 35%),linear-gradient(to top,rgba(0,0,0,.35) 0,rgba(0,0,0,0) 20%)}
   .hero-main{padding-top:calc(var(--header-h) + 5vh);padding-bottom:32px;max-width:1040px}
   .hero-actions{margin-top:auto;padding-top:32px}
   .hero h1{font-size:var(--fs-hero);line-height:var(--lh-hero);max-width:none}
@@ -269,14 +269,14 @@ html:not(.js) .menu-btn{display:none}
 .faq details p{padding:0 32px 22px 0;font-size:15px;line-height:23px}
 
 /* Closing */
-.closing{position:relative;overflow:hidden;background:var(--color-ink);color:rgba(255,255,255,.85);text-align:center;padding:72px 0 0;min-height:540px}
-.closing-media{position:absolute;inset:0;margin:0}
-.closing-media img{width:100%;height:100%;object-fit:cover;object-position:45% 80%}
-.closing-media::after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.62),rgba(0,0,0,.25) 50%,rgba(0,0,0,0) 72%)}
+.closing{position:relative;overflow:hidden;background:var(--color-ink);color:rgba(255,255,255,.85);text-align:center;padding:72px 0 0;display:flex;flex-direction:column}
+.closing-media{position:relative;order:2;margin:40px 0 0}
+.closing-media img{width:100%;aspect-ratio:16/10;object-fit:cover;object-position:50% 50%}
+.closing-media::after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,var(--color-ink) 0,rgba(23,26,32,0) 30%)}
 .closing .wrap{position:relative;z-index:1}
 .closing h2{color:#fff;font-size:30px;line-height:38px}
 .closing p{margin:14px auto 32px;font-size:var(--fs-lead);line-height:var(--lh-lead);max-width:44ch}
-@media (min-width:900px){.closing{padding:104px 0 0;min-height:720px}.closing h2{font-size:var(--fs-h2);line-height:var(--lh-h2)}}
+@media (min-width:900px){.closing{display:block;padding:64px 0 0;min-height:760px}.closing-media{position:absolute;inset:0;margin:0}.closing-media img{height:100%;aspect-ratio:auto;object-position:50% 25%}.closing-media::after{background:linear-gradient(to bottom,rgba(0,0,0,.55) 0,rgba(0,0,0,.2) 32%,rgba(0,0,0,0) 48%)}.closing h2{font-size:var(--fs-h2);line-height:var(--lh-h2)}}
 
 /* Footer */
 .footer{padding:40px 0 48px;font-size:var(--fs-legal);line-height:18px;color:var(--color-text)}
@@ -328,7 +328,7 @@ html:not(.js) .menu-btn{display:none}
   <section class="hero" aria-labelledby="h1">
     <div class="hero-stage">
     <div class="hero-media">
-      <img src="img/hero-model3-1280.webp" srcset="img/hero-model3-828.webp 828w, img/hero-model3-1280.webp 1280w, img/hero-model3-1728.webp 1728w" sizes="(min-width: 900px) 130vw, 100vw" width="1728" height="844" fetchpriority="high" decoding="async" alt="Tesla Model 3 gris aparcado frente a un edificio de piedra con escalinata">
+      <img src="img/hero-model3-rojo-1280.webp" srcset="img/hero-model3-rojo-828.webp 828w, img/hero-model3-rojo-1280.webp 1280w, img/hero-model3-rojo-2000.webp 2000w" sizes="100vw" width="2000" height="1500" fetchpriority="high" decoding="async" alt="Tesla Model 3 rojo de perfil sobre fondo oscuro con un halo de luz roja">
     </div>
     <div class="hero-main">
       <p class="eyebrow">Programa Recomendar y ganar · España</p>
@@ -440,7 +440,7 @@ html:not(.js) .menu-btn{display:none}
 
   <section class="closing" aria-labelledby="h-cierre">
     <div class="closing-media">
-      <img src="img/cierre-modely-1600.webp" srcset="img/cierre-modely-960.webp 960w, img/cierre-modely-1600.webp 1600w, img/cierre-modely-2400.webp 2400w" sizes="100vw" width="2400" height="1018" loading="lazy" decoding="async" alt="Tesla Model Y rojo tomando una curva en una carretera entre colinas verdes">
+      <img src="img/cierre-modely-plata-1600.webp" srcset="img/cierre-modely-plata-960.webp 960w, img/cierre-modely-plata-1600.webp 1600w, img/cierre-modely-plata-2000.webp 2000w" sizes="100vw" width="2000" height="1125" loading="lazy" decoding="async" alt="Tesla Model Y plateado circulando por una carretera de montaña con nieve al atardecer">
     </div>
     <div class="wrap reveal">
       <h2 id="h-cierre">¿Vas a pedir tu primer Tesla?</h2>

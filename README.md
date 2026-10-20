@@ -18,7 +18,7 @@ Web estática de una sola página (HTML + CSS + JS en línea) para Cloudflare Pa
 
 ## Pendiente
 - **Fotos provisionales de tesla.com (© Tesla, Inc.), solo para la demo. Sustituir antes de publicar:**
-  - `img/hero-model3-*.webp` (hero), `img/model3-*.webp` y `img/modely-*.webp` (Modelos), `img/cierre-modely-*.webp` (cierre).
+  - `img/hero-model3-rojo-*.webp` (hero) y `img/cierre-modely-plata-*.webp` (cierre): press kit de Tesla. `img/model3-*.webp` y `img/modely-*.webp` (Modelos): tesla.com.
   - `img/corazon-446.webp` (robot, «Quién recomienda»): cambiar por la foto propia del propietario haciendo un corazón delante de su Model 3, proporción 4:5, con alt «Propietario haciendo un corazón con las manos delante de su Tesla Model 3».
   - Si la licencia de las fotos definitivas exige crédito, añadirlo en el footer.
 - Validar en https://validator.schema.org y en la prueba de resultados enriquecidos de Google tras publicar.
