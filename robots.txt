@@ -1,0 +1,4 @@
+User-agent: *
+Allow: /
+
+Sitemap: https://referidostesla.com/sitemap.xml
