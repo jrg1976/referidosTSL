@@ -64,8 +64,7 @@
       "inLanguage": "es-ES",
       "mainEntity": [
         { "@type": "Question", "name": "¿Qué es el programa de referidos de Tesla?", "acceptedAnswer": { "@type": "Answer", "text": "Es el programa Recomendar y ganar de Tesla. Si compras tu primer Model 3 o Model Y nuevo desde el enlace de recomendación de un propietario, los dos recibís una ventaja. En España, ahora mismo son 1.000 km de Supercarga gratis para cada uno." } },
-        { "@type": "Question", "name": "¿Qué gano si compro un Tesla con un enlace de referido?", "acceptedAnswer": { "@type": "Answer", "text": "1.000 km de Supercarga gratis. Se añaden como créditos de Supercarga en la app de Tesla cuando recibes el coche y caducan a los 12 meses." } },
-        { "@type": "Question", "name": "¿Qué gana la persona que me recomienda?", "acceptedAnswer": { "@type": "Answer", "text": "También 1.000 km de Supercarga. El precio de tu coche no cambia: la ventaja del recomendador la pone Tesla, no sale de tu bolsillo." } },
+        { "@type": "Question", "name": "¿Qué ganas por comprar con el referido?", "acceptedAnswer": { "@type": "Answer", "text": "1.000 km de Supercarga. El precio de tu coche no cambia: la ventaja del recomendador la pone Tesla, no sale de tu bolsillo." } },
         { "@type": "Question", "name": "¿Hay algún código de referido de Tesla mejor que otro?", "acceptedAnswer": { "@type": "Answer", "text": "No. Todos los enlaces de propietarios en España dan la misma ventaja al comprador. Lo único que importa es que el propietario no haya llegado al límite de 10 recomendaciones en el año, porque entonces el comprador no recibe nada." } },
         { "@type": "Question", "name": "¿Puedo añadir el enlace de referido después de hacer el pedido?", "acceptedAnswer": { "@type": "Answer", "text": "No. Tesla no permite aplicar un enlace de recomendación a un pedido ya hecho. Abre el enlace primero y haz el pedido desde esa misma página." } },
         { "@type": "Question", "name": "¿Qué modelos de Tesla entran en el programa?", "acceptedAnswer": { "@type": "Answer", "text": "Model 3 y Model Y. El Model S y el Model X no tienen ventajas de comprador en el programa actual." } },
@@ -76,7 +75,6 @@
         { "@type": "Question", "name": "¿Caducan los km de Supercarga del referido?", "acceptedAnswer": { "@type": "Answer", "text": "Sí, a los 12 meses de la fecha de concesión. Cuando caducan, dejan de aparecer en la app." } },
         { "@type": "Question", "name": "¿Puedo cambiar los km por dinero o pasárselos a otra persona?", "acceptedAnswer": { "@type": "Answer", "text": "No. Las ventajas no son transferibles ni se pueden canjear por efectivo." } },
         { "@type": "Question", "name": "¿Usar el enlace cambia el precio del coche?", "acceptedAnswer": { "@type": "Answer", "text": "No. Configuras y pagas en tesla.com con los mismos precios. El enlace solo añade los 1.000 km." } },
-        { "@type": "Question", "name": "¿Cuántas veces se puede usar un mismo enlace de referido?", "acceptedAnswer": { "@type": "Answer", "text": "Cada propietario puede recomendar hasta 10 pedidos por año natural. Si llego a ese límite, lo indicaré en esta página." } },
         { "@type": "Question", "name": "¿Es seguro el enlace ts.la?", "acceptedAnswer": { "@type": "Answer", "text": "Sí. ts.la es el acortador de enlaces de Tesla y te lleva a tesla.com. La compra la haces directamente con Tesla y esta web no recoge ningún dato tuyo." } },
         { "@type": "Question", "name": "¿Me das algo extra por usar tu enlace?", "acceptedAnswer": { "@type": "Answer", "text": "No. Las condiciones de Tesla prohíben pagar u ofrecer incentivos por usar un enlace de recomendación. Lo que recibes son los 1.000 km que da Tesla." } },
         { "@type": "Question", "name": "¿Vale para todas las versiones del Model 3 y del Model Y?", "acceptedAnswer": { "@type": "Answer", "text": "Las condiciones de Tesla hablan de Model 3 y Model Y sin excluir versiones, así que vale para cualquiera de ellas siempre que sea nuevo." } },
@@ -251,14 +249,6 @@ html:not(.js) .menu-btn{display:none}
 .not-eligible{margin-top:20px;font-size:15px;line-height:22px;color:var(--color-muted)}
 .not-eligible strong{color:var(--color-ink);font-weight:500}
 
-/* Conditions */
-.terms{margin:0;border-top:1px solid var(--color-line)}
-.terms div{display:grid;gap:4px;padding:18px 0;border-bottom:1px solid var(--color-line)}
-.terms dt{font-weight:500;color:var(--color-ink);font-size:15px}
-.terms dd{margin:0;font-size:15px;line-height:22px}
-@media (min-width:900px){.terms div{grid-template-columns:240px 1fr;gap:32px;padding:20px 0}}
-.terms a{color:var(--color-ink);text-underline-offset:3px}
-.terms a:hover{color:var(--color-primary)}
 
 /* Owner */
 .owner{display:grid;gap:40px;align-items:center}
@@ -320,7 +310,6 @@ html:not(.js) .menu-btn{display:none}
     <a class="logo" href="/" aria-label="referidostesla.com, inicio">referidostesla.com</a>
     <nav class="nav" aria-label="Principal">
       <a href="#como-funciona">Cómo funciona</a>
-      <a href="#condiciones">Condiciones</a>
       <a href="#preguntas">Preguntas</a>
     </nav>
     <a class="btn btn-primary btn-sm header-cta" href="https://ts.la/jaime666237" rel="nofollow noopener" target="_blank">Configurador</a>
@@ -332,7 +321,6 @@ html:not(.js) .menu-btn{display:none}
   <button class="panel-close" type="button" aria-label="Cerrar menú">✕</button>
   <ul>
     <li><a href="#como-funciona">Cómo funciona</a></li>
-    <li><a href="#condiciones">Condiciones</a></li>
     <li><a href="#preguntas">Preguntas</a></li>
   </ul>
   <a class="btn btn-primary" href="https://ts.la/jaime666237" rel="nofollow noopener" target="_blank">Usar mi enlace</a>
@@ -371,7 +359,7 @@ html:not(.js) .menu-btn{display:none}
       <ol class="steps">
         <li class="step reveal">
           <span class="num" aria-hidden="true">01</span>
-          <h3>Abre mi enlace</h3>
+          <h3>Accede al configurador</h3>
           <p>Te lleva a tesla.com con la recomendación ya aplicada. Si ya tienes la web de Tesla abierta, empieza de nuevo desde el enlace.</p>
         </li>
         <li class="step reveal">
@@ -408,27 +396,6 @@ html:not(.js) .menu-btn{display:none}
     </div>
   </section>
 
-  <section class="section section-alt" id="condiciones" aria-labelledby="h-condiciones">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <h2 id="h-condiciones">Lo que dice Tesla, resumido</h2>
-        <p class="lead">Resumen de los términos del programa en España, en vigor desde el 16/10/2024 y actualizados por Tesla el 4/6/2025.</p>
-        <p class="seal seal-dark">Condiciones comprobadas el <time datetime="2026-10-20">20/10/2026</time></p>
-      </div>
-      <dl class="terms reveal">
-        <div><dt>Quién puede usarlo</dt><dd>Quien compra su primer Model 3 o Model Y. Mayor de 18 años.</dd></div>
-        <div><dt>Cuándo</dt><dd>El enlace se abre antes de hacer el pedido. No se puede añadir después.</dd></div>
-        <div><dt>Ventaja</dt><dd>1.000 km de Supercarga gratis para el comprador y 1.000 km para quien recomienda.</dd></div>
-        <div><dt>Entrega de los km</dt><dd>Al aceptar la entrega del coche. Hasta entonces figuran como pendientes.</dd></div>
-        <div><dt>Caducidad</dt><dd>12 meses desde la fecha de concesión.</dd></div>
-        <div><dt>Límite</dt><dd>10 recomendaciones por propietario y año natural. Por encima, el comprador no recibe ventaja.</dd></div>
-        <div><dt>Canje</dt><dd>Personal: no se transfiere ni se cambia por dinero.</dd></div>
-        <div><dt>Incentivos</dt><dd>Prohibido pagar u ofrecer regalos por usar un enlace, y la publicidad de pago.</dd></div>
-        <div><dt>Fuente</dt><dd><a href="https://www.tesla.com/es_es/support/refer-and-earn" rel="noopener" target="_blank">Recomendar y ganar, Soporte de Tesla España</a>. Comprobado el <time datetime="2026-10-20">20/10/2026</time>. Si Tesla cambia las condiciones, actualizo esta página.</dd></div>
-      </dl>
-    </div>
-  </section>
-
   <section class="section" id="quien-recomienda" aria-labelledby="h-quien">
     <div class="wrap owner">
       <!-- Imagen provisional para la demo. Sustituir por la foto propia del propietario haciendo un corazón delante de su Model 3, con alt="Propietario haciendo un corazón con las manos delante de su Tesla Model 3". -->
@@ -443,7 +410,6 @@ html:not(.js) .menu-btn{display:none}
         <ul class="chips" aria-label="Etiquetas">
           <li>Model 3 Premium RWD</li>
           <li>España</li>
-          <li>Enlace propio, sin rotación</li>
         </ul>
       </div>
     </div>
@@ -457,8 +423,7 @@ html:not(.js) .menu-btn{display:none}
       </div>
       <div class="faq">
         <details open><summary>¿Qué es el programa de referidos de Tesla?</summary><p>Es el programa Recomendar y ganar de Tesla. Si compras tu primer Model 3 o Model Y nuevo desde el enlace de recomendación de un propietario, los dos recibís una ventaja. En España, ahora mismo son 1.000 km de Supercarga gratis para cada uno.</p></details>
-        <details><summary>¿Qué gano si compro un Tesla con un enlace de referido?</summary><p>1.000 km de Supercarga gratis. Se añaden como créditos de Supercarga en la app de Tesla cuando recibes el coche y caducan a los 12 meses.</p></details>
-        <details><summary>¿Qué gana la persona que me recomienda?</summary><p>También 1.000 km de Supercarga. El precio de tu coche no cambia: la ventaja del recomendador la pone Tesla, no sale de tu bolsillo.</p></details>
+        <details><summary>¿Qué ganas por comprar con el referido?</summary><p>1.000 km de Supercarga. El precio de tu coche no cambia: la ventaja del recomendador la pone Tesla, no sale de tu bolsillo.</p></details>
         <details><summary>¿Hay algún código de referido de Tesla mejor que otro?</summary><p>No. Todos los enlaces de propietarios en España dan la misma ventaja al comprador. Lo único que importa es que el propietario no haya llegado al límite de 10 recomendaciones en el año, porque entonces el comprador no recibe nada.</p></details>
         <details><summary>¿Puedo añadir el enlace de referido después de hacer el pedido?</summary><p>No. Tesla no permite aplicar un enlace de recomendación a un pedido ya hecho. Abre el enlace primero y haz el pedido desde esa misma página.</p></details>
         <details><summary>¿Qué modelos de Tesla entran en el programa?</summary><p>Model 3 y Model Y. El Model S y el Model X no tienen ventajas de comprador en el programa actual.</p></details>
@@ -469,7 +434,6 @@ html:not(.js) .menu-btn{display:none}
         <details><summary>¿Caducan los km de Supercarga del referido?</summary><p>Sí, a los 12 meses de la fecha de concesión. Cuando caducan, dejan de aparecer en la app.</p></details>
         <details><summary>¿Puedo cambiar los km por dinero o pasárselos a otra persona?</summary><p>No. Las ventajas no son transferibles ni se pueden canjear por efectivo.</p></details>
         <details><summary>¿Usar el enlace cambia el precio del coche?</summary><p>No. Configuras y pagas en tesla.com con los mismos precios. El enlace solo añade los 1.000 km.</p></details>
-        <details><summary>¿Cuántas veces se puede usar un mismo enlace de referido?</summary><p>Cada propietario puede recomendar hasta 10 pedidos por año natural. Si llego a ese límite, lo indicaré en esta página.</p></details>
         <details><summary>¿Es seguro el enlace ts.la?</summary><p>Sí. ts.la es el acortador de enlaces de Tesla y te lleva a tesla.com. La compra la haces directamente con Tesla y esta web no recoge ningún dato tuyo.</p></details>
         <details><summary>¿Me das algo extra por usar tu enlace?</summary><p>No. Las condiciones de Tesla prohíben pagar u ofrecer incentivos por usar un enlace de recomendación. Lo que recibes son los 1.000 km que da Tesla.</p></details>
         <details><summary>¿Vale para todas las versiones del Model 3 y del Model Y?</summary><p>Las condiciones de Tesla hablan de Model 3 y Model Y sin excluir versiones, así que vale para cualquiera de ellas siempre que sea nuevo.</p></details>
@@ -485,7 +449,7 @@ html:not(.js) .menu-btn{display:none}
     <div class="wrap reveal">
       <h2 id="h-cierre">¿Vas a pedir tu primer Tesla?</h2>
       <p>Abre el enlace antes de configurar y te llevas 1.000 km de Supercarga.</p>
-      <a class="btn btn-primary btn-lg" href="https://ts.la/jaime666237" rel="nofollow noopener" target="_blank">Usar mi enlace</a>
+      <a class="btn btn-primary btn-lg" href="https://ts.la/jaime666237" rel="nofollow noopener" target="_blank">Configurador</a>
     </div>
   </section>
 
@@ -495,11 +459,10 @@ html:not(.js) .menu-btn{display:none}
   <div class="wrap">
     <nav aria-label="Pie de página">
       <a href="#como-funciona">Cómo funciona</a>
-      <a href="#condiciones">Condiciones</a>
       <a href="#preguntas">Preguntas</a>
     </nav>
     <p>referidostesla.com es una web independiente hecha por un propietario. No está afiliada, patrocinada ni aprobada por Tesla, Inc. Tesla, Model 3, Model Y y Supercargador son marcas de Tesla, Inc.</p>
-    <p>Condiciones comprobadas el <time datetime="2026-10-20">20/10/2026</time> en tesla.com. Contacto: <a href="mailto:hola@referidostesla.com">hola@referidostesla.com</a></p>
+    <p>Condiciones comprobadas el <time datetime="2026-10-20">20/10/2026</time> en tesla.com.</p>
     <p>Fotografías provisionales de tesla.com, propiedad de Tesla, Inc., usadas solo en esta demo. Tipografía Inter, licencia SIL Open Font License 1.1.</p>
   </div>
 </footer>

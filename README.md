@@ -9,7 +9,7 @@ Web estática de una sola página (HTML + CSS + JS en línea) para Cloudflare Pa
 - `README.md` y `fonts/LICENSE.txt` se publican también; no afectan al SEO.
 
 ## Al revisar las condiciones (todo a la vez)
-1. `index.html`: buscar `20/10/2026` (5 apariciones visibles, dentro de `<time datetime="2026-10-20">`) y el texto de la meta description.
+1. `index.html`: buscar `20/10/2026` (3 apariciones visibles, dentro de `<time datetime="2026-10-20">`) y el texto de la meta description.
 2. `index.html` JSON-LD: `dateModified` y la fecha de la `description` del WebPage.
 3. `sitemap.xml`: `<lastmod>`.
 4. `llms.txt`: fecha de comprobación.
