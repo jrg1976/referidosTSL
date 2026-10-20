@@ -9,7 +9,7 @@ Web estática de una sola página (HTML + CSS + JS en línea) para Cloudflare Pa
 - `README.md` y `fonts/LICENSE.txt` se publican también; no afectan al SEO.
 
 ## Al revisar las condiciones (todo a la vez)
-1. `index.html`: buscar `20/10/2026` (3 apariciones visibles, dentro de `<time datetime="2026-10-20">`) y el texto de la meta description.
+1. `index.html`: buscar `20/10/2026` (1 aparición visible en el footer, dentro de `<time datetime="2026-10-20">`) y el texto de la meta description.
 2. `index.html` JSON-LD: `dateModified` y la fecha de la `description` del WebPage.
 3. `sitemap.xml`: `<lastmod>`.
 4. `llms.txt`: fecha de comprobación.
@@ -20,6 +20,6 @@ Web estática de una sola página (HTML + CSS + JS en línea) para Cloudflare Pa
 - **Fotos provisionales de tesla.com (© Tesla, Inc.), solo para la demo. Sustituir antes de publicar:**
   - `img/hero-model3-*.webp` (hero), `img/model3-*.webp` y `img/modely-*.webp` (Modelos), `img/cierre-modely-*.webp` (cierre).
   - `img/corazon-446.webp` (robot, «Quién recomienda»): cambiar por la foto propia del propietario haciendo un corazón delante de su Model 3, proporción 4:5, con alt «Propietario haciendo un corazón con las manos delante de su Tesla Model 3».
-  - Cambiar también la línea de créditos del footer.
+  - Si la licencia de las fotos definitivas exige crédito, añadirlo en el footer.
 - Validar en https://validator.schema.org y en la prueba de resultados enriquecidos de Google tras publicar.
 - Alta en Google Search Console y Bing Webmaster Tools, y enviar `sitemap.xml`.
