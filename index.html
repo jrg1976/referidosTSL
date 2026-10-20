@@ -43,7 +43,7 @@
       "@type": "WebPage",
       "@id": "https://referidostesla.com/#webpage",
       "url": "https://referidostesla.com/",
-      "name": "Referidos Tesla: 1.000 km de Supercarga gratis con mi enlace",
+      "name": "Referidos Tesla: 1.000 km de Supercarga gratis",
       "isPartOf": { "@id": "https://referidostesla.com/#website" },
       "inLanguage": "es-ES",
       "datePublished": "2026-10-20",
@@ -193,25 +193,17 @@ html:not(.js) .menu-btn{display:none}
 .answer strong{color:#fff;font-weight:500}
 .hero-ctas{margin-top:32px;display:flex;flex-direction:column;gap:12px;width:100%;max-width:400px}
 .hero-ctas .btn{width:100%}
-.linkbox{display:flex;align-items:center;justify-content:space-between;height:var(--btn-h);padding:0 4px 0 16px;border-radius:var(--radius);background:#fff;color:var(--color-text)}
-.linkbox a{font-weight:500;text-decoration:none;color:var(--color-ink);font-variant-numeric:tabular-nums;overflow:hidden;text-overflow:ellipsis}
-.linkbox a:hover{text-decoration:underline}
-.copy-btn{height:32px;min-width:84px;padding:0 14px;border:0;border-radius:var(--radius);background:var(--color-surface);color:var(--color-ink);font:500 var(--fs-body)/1 var(--font);cursor:pointer;transition:background-color var(--dur) var(--ease)}
-.copy-btn:hover{background:#E4E4E4}
-.copy-btn.is-done{background:var(--color-ink);color:#fff}
 .seal{display:inline-block;margin-top:24px;padding:6px 12px;border-radius:999px;background:rgba(23,26,32,.5);-webkit-backdrop-filter:blur(8px);backdrop-filter:blur(8px);font-size:var(--fs-legal);color:rgba(255,255,255,.85)}
 .seal::before{content:"";display:inline-block;vertical-align:middle;width:6px;height:6px;margin:-2px 8px 0 0;border-radius:50%;background:#4CC38A}
 .seal-dark{background:var(--color-surface);color:var(--color-text)}
-.stats{position:relative;display:grid;grid-template-columns:repeat(3,1fr);gap:8px;max-width:var(--maxw);width:100%;margin:0 auto;padding:24px var(--gutter) calc(32px + env(safe-area-inset-bottom));border-top:1px solid rgba(255,255,255,.1)}
-.stats div{display:flex;flex-direction:column-reverse;align-items:center;text-align:center;gap:4px}
-.stats dt{font-size:var(--fs-legal);color:var(--color-on-dark-muted)}
-.stats dd{margin:0;font-size:19px;line-height:26px;white-space:nowrap;font-weight:500;color:#fff;font-variant-numeric:tabular-nums}
+.stats{display:flex;flex-wrap:wrap;justify-content:center;align-items:baseline;gap:2px 12px;max-width:var(--maxw);margin:0 auto;padding:22px var(--gutter) calc(26px + env(safe-area-inset-bottom));text-align:center;font-size:17px;line-height:24px;color:rgba(255,255,255,.85)}
+.stats strong{font-size:28px;line-height:36px;font-weight:500;color:#fff;font-variant-numeric:tabular-nums}
 @media (min-width:600px){
   .hero h1{font-size:44px;line-height:50px}
-  .stats dd{font-size:32px;line-height:40px}
+  .stats strong{font-size:32px;line-height:40px}
 }
 @media (min-width:900px){
-  .hero-stage{min-height:max(560px,calc(100vh - 128px));min-height:max(560px,calc(100svh - 128px))}
+  .hero-stage{min-height:max(560px,calc(100vh - 100px));min-height:max(560px,calc(100svh - 100px))}
   .hero-media{position:absolute;inset:0;height:auto}
   .hero-media img{height:100%;aspect-ratio:auto;object-position:50% 72%}
   .hero-media::after{content:"";position:absolute;inset:0;background:linear-gradient(to bottom,rgba(0,0,0,.62) 0,rgba(0,0,0,.38) 30%,rgba(0,0,0,0) 52%),linear-gradient(to top,rgba(0,0,0,.5) 0,rgba(0,0,0,0) 26%)}
@@ -221,7 +213,8 @@ html:not(.js) .menu-btn{display:none}
   .answer{font-size:18px;line-height:28px;max-width:58em;color:rgba(255,255,255,.85)}
   .hero-ctas{flex-direction:row;justify-content:center;max-width:none}
   .hero-ctas>*{width:var(--btn-min-w)!important;flex:0 0 auto}
-  .stats dd{font-size:40px;line-height:48px}
+  .stats{font-size:20px;line-height:28px}
+  .stats strong{font-size:40px;line-height:48px}
 }
 
 /* Sections */
@@ -236,17 +229,6 @@ html:not(.js) .menu-btn{display:none}
 .section-head.center{text-align:center}
 .section-head.center .lead{margin-left:auto;margin-right:auto}
 
-/* Benefit cards */
-.cards{display:grid;gap:16px}
-@media (min-width:900px){.cards{grid-template-columns:1fr 1fr}}
-.card{border-radius:var(--radius-card);padding:32px;min-height:340px;display:flex;flex-direction:column;background:var(--color-surface)}
-.card-dark{background:var(--color-ink);color:var(--color-on-dark-muted)}
-.card .tag{font-size:var(--fs-body);font-weight:500}
-.card .big{margin-top:auto;padding-top:48px;font-size:56px;line-height:60px;font-weight:500;color:var(--color-ink);font-variant-numeric:tabular-nums}
-.card h3{margin-top:8px;font-size:20px;line-height:28px}
-.card p{margin-top:8px;font-size:15px;line-height:22px;max-width:46ch}
-.card-dark h3,.card-dark .big{color:#fff}
-@media (min-width:900px){.card{padding:40px;min-height:420px}.card .big{font-size:72px;line-height:76px}}
 
 /* Steps */
 .steps{list-style:none;margin:0;padding:0;display:grid;gap:16px}
@@ -337,12 +319,11 @@ html:not(.js) .menu-btn{display:none}
   <div class="header-in">
     <a class="logo" href="/" aria-label="referidostesla.com, inicio">referidostesla.com</a>
     <nav class="nav" aria-label="Principal">
-      <a href="#ventajas">Ventajas</a>
       <a href="#como-funciona">Cómo funciona</a>
       <a href="#condiciones">Condiciones</a>
       <a href="#preguntas">Preguntas</a>
     </nav>
-    <a class="btn btn-primary btn-sm header-cta" href="https://ts.la/jaime666237" rel="nofollow noopener" target="_blank">Usar mi enlace</a>
+    <a class="btn btn-primary btn-sm header-cta" href="https://ts.la/jaime666237" rel="nofollow noopener" target="_blank">Configurador</a>
     <button class="menu-btn" type="button" aria-controls="menu" aria-expanded="false">Menú</button>
   </div>
 </header>
@@ -350,7 +331,6 @@ html:not(.js) .menu-btn{display:none}
 <div class="panel" id="menu" role="dialog" aria-modal="true" aria-label="Menú" hidden>
   <button class="panel-close" type="button" aria-label="Cerrar menú">✕</button>
   <ul>
-    <li><a href="#ventajas">Ventajas</a></li>
     <li><a href="#como-funciona">Cómo funciona</a></li>
     <li><a href="#condiciones">Condiciones</a></li>
     <li><a href="#preguntas">Preguntas</a></li>
@@ -367,52 +347,20 @@ html:not(.js) .menu-btn{display:none}
     </div>
     <div class="hero-main">
       <p class="eyebrow">Programa Recomendar y ganar · España</p>
-      <h1 id="h1">Referidos Tesla: 1.000 km de Supercarga gratis con mi enlace</h1>
+      <h1 id="h1">Referidos Tesla: 1.000 km de Supercarga gratis</h1>
       <p class="answer">Si compras tu primer Tesla Model 3 o Model Y nuevo desde un enlace de recomendación, recibes <strong>1.000 km de Supercarga gratis</strong>. Abre el enlace antes de hacer el pedido: después ya no se puede añadir.</p>
 
       <div class="hero-actions">
       <div class="hero-ctas">
         <a class="btn btn-primary btn-lg" href="https://ts.la/jaime666237" rel="nofollow noopener" target="_blank">Configurar mi Tesla con 1.000 km</a>
-        <div class="linkbox">
-          <a href="https://ts.la/jaime666237" rel="nofollow noopener" target="_blank">ts.la/jaime666237</a>
-          <button class="copy-btn" type="button" data-copy="https://ts.la/jaime666237">Copiar</button>
-        </div>
       </div>
-      <p class="sr-only" aria-live="polite" id="copy-status"></p>
 
       <p class="seal">Condiciones comprobadas el <time datetime="2026-10-20">20/10/2026</time></p>
       </div>
     </div>
     </div>
 
-    <dl class="stats" aria-label="Datos rápidos">
-      <div><dt>Comprador</dt><dd>1.000 km</dd></div>
-      <div><dt>Recomendador</dt><dd>1.000 km</dd></div>
-      <div><dt>Caducan</dt><dd>12 meses</dd></div>
-    </dl>
-  </section>
-
-  <section class="section" id="ventajas" aria-labelledby="h-ventajas">
-    <div class="wrap">
-      <div class="section-head reveal">
-        <h2 id="h-ventajas">Los dos recibimos lo mismo</h2>
-        <p class="lead">Tesla da la ventaja a quien compra y a quien recomienda. El precio del coche no cambia.</p>
-      </div>
-      <div class="cards">
-        <article class="card card-dark reveal">
-          <p class="tag">Tú, al comprar</p>
-          <p class="big">1.000 km</p>
-          <h3>Supercarga gratis en tu primer Tesla.</h3>
-          <p>Para tu primer Model 3 o Model Y nuevo. Los km aparecen en la app cuando recibes el coche y caducan a los 12 meses.</p>
-        </article>
-        <article class="card reveal">
-          <p class="tag">Yo, al recomendarte</p>
-          <p class="big">1.000 km</p>
-          <h3>Supercarga gratis para mí.</h3>
-          <p>Lo pone Tesla, no tú. No hay pagos ni regalos extra entre nosotros: las condiciones del programa lo prohíben.</p>
-        </article>
-      </div>
-    </div>
+    <p class="stats"><strong>1.000 km</strong> para utilizar en 12 meses</p>
   </section>
 
   <section class="section section-alt" id="como-funciona" aria-labelledby="h-pasos">
@@ -546,7 +494,6 @@ html:not(.js) .menu-btn{display:none}
 <footer class="footer">
   <div class="wrap">
     <nav aria-label="Pie de página">
-      <a href="#ventajas">Ventajas</a>
       <a href="#como-funciona">Cómo funciona</a>
       <a href="#condiciones">Condiciones</a>
       <a href="#preguntas">Preguntas</a>
@@ -583,15 +530,6 @@ html:not(.js) .menu-btn{display:none}
   panel.querySelectorAll('a[href^="#"]').forEach(function(a){a.addEventListener('click',function(){setMenu(false)})});
   document.addEventListener('keydown',function(e){if(e.key==='Escape'&&!panel.hidden)setMenu(false)});
 
-  var status=document.getElementById('copy-status');
-  document.querySelectorAll('[data-copy]').forEach(function(b){
-    b.addEventListener('click',function(){
-      var text=b.getAttribute('data-copy');
-      function done(){b.textContent='Copiado';b.classList.add('is-done');status.textContent='Enlace copiado';setTimeout(function(){b.textContent='Copiar';b.classList.remove('is-done');status.textContent=''},2000)}
-      if(navigator.clipboard&&window.isSecureContext){navigator.clipboard.writeText(text).then(done,fallback)}else{fallback()}
-      function fallback(){var t=document.createElement('textarea');t.value=text;t.setAttribute('readonly','');t.style.position='absolute';t.style.left='-9999px';document.body.appendChild(t);t.select();try{document.execCommand('copy');done()}catch(err){}document.body.removeChild(t)}
-    });
-  });
 })();
 </script>
 </body>
