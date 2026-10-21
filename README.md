@@ -11,6 +11,16 @@ Web estática de una sola página (HTML + CSS + JS en línea). No hay paso de co
 - La app de Cloudflare en GitHub solo tiene acceso a este repo.
 - `README.md` y `fonts/LICENSE.txt` también se publican; no afectan al SEO.
 
+## Estadísticas propias (sin cookies)
+- `functions/api/hit.js` (POST `/api/hit`): suma 1 al contador del día en una base D1 (tabla `stats`: día de Madrid, tipo `view`/`click`, botón). Ignora bots, peticiones de otro origen y botones desconocidos. No guarda IP ni identificadores.
+- `functions/panel/index.js` (GET `/panel`): panel con visitas y clics de los últimos 30 días. Solo responde si la petición viene de Cloudflare Access (cabecera `Cf-Access-Jwt-Assertion`).
+- `_routes.json` limita las funciones a `/api/*` y `/panel*`; el resto de la web sigue siendo estático.
+- En `index.html` cada botón hacia `ts.la` lleva `data-t` (`header`, `menu`, `hero`, `cierre`, `barra`). El script del final envía la visita y los clics con `sendBeacon`.
+- Puesta en marcha (Cloudflare): crear una base D1 y ejecutar
+  `CREATE TABLE IF NOT EXISTS stats (day TEXT NOT NULL, kind TEXT NOT NULL, label TEXT NOT NULL, n INTEGER NOT NULL DEFAULT 0, PRIMARY KEY (day, kind, label));`
+  Enlazarla al proyecto de Pages (Settings > Bindings > D1, variable `DB`, en producción) y proteger `referidostesla.com/panel*` con una aplicación de Cloudflare Access (política: tu correo, código por correo).
+- Sin la base D1 enlazada, `/api/hit` no hace nada y la web funciona igual.
+
 ## Al revisar las condiciones (todo a la vez)
 1. `index.html`: buscar `20/10/2026` (1 aparición visible en el footer, dentro de `<time datetime="2026-10-20">`) y el texto de la meta description.
 2. `index.html` JSON-LD: `dateModified` y la fecha de la `description` del WebPage.
