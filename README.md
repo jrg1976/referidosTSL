@@ -19,6 +19,7 @@ Web estática de una sola página (HTML + CSS + JS en línea). No hay paso de co
 - Puesta en marcha (Cloudflare): crear una base D1 y ejecutar
   `CREATE TABLE IF NOT EXISTS stats (day TEXT NOT NULL, kind TEXT NOT NULL, label TEXT NOT NULL, n INTEGER NOT NULL DEFAULT 0, PRIMARY KEY (day, kind, label));`
   Enlazarla al proyecto de Pages (Settings > Bindings > D1, variable `DB`, en producción) y proteger `referidostesla.com/panel*` con una aplicación de Cloudflare Access (política: tu correo, código por correo).
+- Alternativa a Access: crear el secreto `PANEL_TOKEN` en el proyecto de Pages; entonces el panel solo se abre con `/panel/?k=<valor>` (la cabecera de Access deja de contar).
 - Sin la base D1 enlazada, `/api/hit` no hace nada y la web funciona igual.
 
 ## Al revisar las condiciones (todo a la vez)

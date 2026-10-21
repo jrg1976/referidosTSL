@@ -86,8 +86,10 @@ ${grafica(dias, vistas, clics)}
 
 export async function onRequestGet({ request, env }) {
   const cabeceras = { 'content-type': 'text/html; charset=utf-8', 'x-robots-tag': 'noindex, nofollow', 'cache-control': 'no-store' };
-  if (!request.headers.get('cf-access-jwt-assertion')) {
-    return new Response(pagina('<h1>Panel sin proteger</h1><p class="sub">Activa Cloudflare Access en /panel para ver las estadísticas.</p>'), { status: 403, headers: cabeceras });
+  const clave = env.PANEL_TOKEN;
+  const autorizado = clave ? new URL(request.url).searchParams.get('k') === clave : !!request.headers.get('cf-access-jwt-assertion');
+  if (!autorizado) {
+    return new Response(pagina('<h1>Acceso denegado</h1><p class="sub">Abre el panel desde Cloudflare Access o con la clave en el enlace.</p>'), { status: 403, headers: cabeceras });
   }
   if (!env.DB) {
     return new Response(pagina('<h1>Base de datos sin conectar</h1><p class="sub">Falta enlazar la base de datos D1 con el nombre DB en el proyecto de Pages.</p>'), { status: 503, headers: cabeceras });
