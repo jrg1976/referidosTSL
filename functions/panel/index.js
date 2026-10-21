@@ -1,4 +1,4 @@
-const BOTONES = { header: 'Cabecera', menu: 'Menú móvil', hero: 'Portada', cierre: 'Cierre', barra: 'Barra móvil' };
+const BOTONES = { header: 'Cabecera', menu: 'Menú móvil', hero: 'Portada', model3: 'Encargar Model 3', modely: 'Encargar Model Y', cierre: 'Cierre', barra: 'Barra móvil' };
 const DIAS = 30;
 
 const hoyMadrid = () => new Intl.DateTimeFormat('sv-SE', { timeZone: 'Europe/Madrid' }).format(new Date());

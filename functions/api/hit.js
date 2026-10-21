@@ -1,4 +1,4 @@
-const BOTONES = new Set(['header', 'menu', 'hero', 'cierre', 'barra']);
+const BOTONES = new Set(['header', 'menu', 'hero', 'model3', 'modely', 'cierre', 'barra']);
 const BOT = /bot|crawl|spider|slurp|headless|lighthouse|pagespeed|preview|monitor|uptime|curl|wget|python|node-fetch|axios|java\//i;
 
 export async function onRequestPost({ request, env }) {

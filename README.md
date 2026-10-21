@@ -15,7 +15,7 @@ Web estática de una sola página (HTML + CSS + JS en línea). No hay paso de co
 - `functions/api/hit.js` (POST `/api/hit`): suma 1 al contador del día en una base D1 (tabla `stats`: día de Madrid, tipo `view`/`click`, botón). Ignora bots, peticiones de otro origen y botones desconocidos. No guarda IP ni identificadores.
 - `functions/panel/index.js` (GET `/panel`): panel con visitas y clics de los últimos 30 días. Solo responde si la petición viene de Cloudflare Access (cabecera `Cf-Access-Jwt-Assertion`).
 - `_routes.json` limita las funciones a `/api/*` y `/panel*`; el resto de la web sigue siendo estático.
-- En `index.html` cada botón hacia `ts.la` lleva `data-t` (`header`, `menu`, `hero`, `cierre`, `barra`). El script del final envía la visita y los clics con `sendBeacon`.
+- En `index.html` cada botón hacia `ts.la` lleva `data-t` (`header`, `menu`, `hero`, `model3`, `modely`, `cierre`, `barra`). El script del final envía la visita y los clics con `sendBeacon`.
 - Puesta en marcha (Cloudflare): crear una base D1 y ejecutar
   `CREATE TABLE IF NOT EXISTS stats (day TEXT NOT NULL, kind TEXT NOT NULL, label TEXT NOT NULL, n INTEGER NOT NULL DEFAULT 0, PRIMARY KEY (day, kind, label));`
   Enlazarla al proyecto de Pages (Settings > Bindings > D1, variable `DB`, en producción) y proteger `referidostesla.com/panel*` con una aplicación de Cloudflare Access (política: tu correo, código por correo).

@@ -241,7 +241,9 @@ html:not(.js) .menu-btn{display:none}
 @media (min-width:600px){.models{grid-template-columns:1fr 1fr}}
 .model{border:1px solid var(--color-line);border-radius:var(--radius-card);overflow:hidden;display:flex;flex-direction:column;margin:0}
 .model img{width:100%;aspect-ratio:16/9;object-fit:cover;background:var(--color-surface)}
-.model-body{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:20px 24px}
+.model-body{display:flex;align-items:center;justify-content:space-between;gap:12px;padding:20px 24px 16px}
+.model-cta{padding:0 24px 24px}
+.model-cta .btn{width:100%}
 .model h3{font-size:24px;line-height:32px}
 .badge{display:inline-flex;align-items:center;gap:6px;height:28px;padding:0 12px;border-radius:999px;background:#E9F7EF;color:#17663F;font-size:13px;font-weight:500}
 .badge::before{content:"✓"}
@@ -384,10 +386,12 @@ html:not(.js) .menu-btn{display:none}
         <article class="model reveal">
           <img src="img/model3-640.webp" srcset="img/model3-640.webp 640w, img/model3-1024.webp 1024w" sizes="(min-width: 1200px) 580px, (min-width: 600px) 50vw, 100vw" width="1024" height="580" loading="lazy" decoding="async" alt="Tesla Model 3 gris circulando por una calle junto a un edificio con columnas">
           <div class="model-body"><h3>Model 3</h3><span class="badge">Elegible</span></div>
+          <div class="model-cta"><a class="btn btn-primary" data-t="model3" aria-label="Encargar Model 3" href="https://ts.la/jaime666237" rel="nofollow noopener" target="_blank">Encargar</a></div>
         </article>
         <article class="model reveal">
           <img src="img/modely-640.webp" srcset="img/modely-640.webp 640w, img/modely-1024.webp 1024w" sizes="(min-width: 1200px) 580px, (min-width: 600px) 50vw, 100vw" width="1024" height="580" loading="lazy" decoding="async" alt="Tesla Model Y gris visto desde atrás en una avenida arbolada">
           <div class="model-body"><h3>Model Y</h3><span class="badge">Elegible</span></div>
+          <div class="model-cta"><a class="btn btn-primary" data-t="modely" aria-label="Encargar Model Y" href="https://ts.la/jaime666237" rel="nofollow noopener" target="_blank">Encargar</a></div>
         </article>
       </div>
       <p class="not-eligible reveal"><strong>No elegibles:</strong> Model S, Model X y vehículos de ocasión certificados.</p>
