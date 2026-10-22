@@ -33,5 +33,5 @@ Web estática de una sola página (HTML + CSS + JS en línea). No hay paso de co
 ## Pendiente
 - **Fotos provisionales de tesla.com (© Tesla, Inc.), solo para la demo. Sustituir antes de publicar:**
   - `img/hero-model3-rojo-*.webp` (hero) y `img/cierre-modely-plata-*.webp` (cierre): press kit de Tesla. `img/model3-*.webp` y `img/modely-*.webp` (Modelos): tesla.com.
-  - `img/corazon-446.webp` (robot, «Quién recomienda»): cambiar por la foto propia del propietario haciendo un corazón delante de su Model 3, proporción 4:5, con alt «Propietario haciendo un corazón con las manos delante de su Tesla Model 3».
-  - Si la licencia de las fotos definitivas exige crédito, añadirlo en el footer.
+  - `img/optimus-*.webp` («Quién recomienda», imagen provisional de Optimus): cambiar por la foto propia del propietario haciendo un corazón delante de su Model 3, proporción 4:5, con alt «Propietario haciendo un corazón con las manos delante de su Tesla Model 3».
+  - Créditos del footer («Fotos coches propiedad de Tesla. Foto Optimus creada con IA.»): actualizarlos al cambiar las fotos; si la licencia de las nuevas exige crédito, añadirlo.
