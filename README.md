@@ -23,7 +23,7 @@ Web estática de una sola página (HTML + CSS + JS en línea). No hay paso de co
 - Sin la base D1 enlazada, `/api/hit` no hace nada y la web funciona igual.
 
 ## Al revisar las condiciones (todo a la vez)
-1. `index.html`: buscar `20/10/2026` (1 aparición visible en el footer, dentro de `<time datetime="2026-10-20">`) y el texto de la meta description.
+1. `index.html`: buscar `20/10/2026` (1 aparición visible en el footer, dentro de `<time datetime="2026-10-20">`).
 2. `index.html` JSON-LD: `dateModified` y la fecha de la `description` del WebPage.
 3. `sitemap.xml`: `<lastmod>`.
 4. `llms.txt`: fecha de comprobación.
